@@ -22,7 +22,6 @@ public class HomeTest {
         int i = list.size()-2;
         WebElement element = list.get(i);
         element.click();
-        wd.navigate().back();
 
     }
 
