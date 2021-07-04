@@ -22,8 +22,7 @@ public class HomeTest {
         int i = list.size()-2;
         WebElement element = list.get(i);
         element.click();
-        wd.findElement(By.tagName("a"));
-        wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
+        wd.navigate().back();
 
     }
 
