@@ -24,6 +24,20 @@ public class ContactTest {
         System.out.println(list.size());
         WebElement element = list.get(last);
         element.click();
+
+    }
+    @Test
+    public void loginTestByCss(){
+        wd.findElement(By.cssSelector("[href='/login']")).click();
+        wd.findElement(By.cssSelector("input[placeholder='Email']")).click();
+        wd.findElement(By.cssSelector("input[placeholder='Email']")).clear();
+        wd.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("mariam@gmail.com");
+
+        wd.findElement(By.cssSelector("input[placeholder='Password']")).click();
+        wd.findElement(By.cssSelector("input[placeholder='Password']")).clear();
+        wd.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys("Mm123456$");
+        wd.findElement(By.cssSelector("div[class$='login_login__3EHKB'] button:nth-child(4)")).click();
+
     }
     @AfterMethod
     public void postCondition(){
