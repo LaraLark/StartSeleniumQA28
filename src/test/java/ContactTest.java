@@ -39,6 +39,23 @@ public class ContactTest {
         wd.findElement(By.cssSelector("div[class$='login_login__3EHKB'] button:nth-child(4)")).click();
 
     }
+    @Test
+    public void loginTestCW(){
+        wd.findElement(By.cssSelector("[href='/login']")).click();
+        WebElement email = wd.findElement(By.cssSelector("input[placeholder='Email']"));
+        email.click();
+        email.clear();
+        email.sendKeys("mariam@gmail.com");
+
+        WebElement password = wd. findElement(By.cssSelector("input[placeholder='Password']"));
+        password.click();
+        password.clear();
+        password.sendKeys("Mm123456$");
+
+        wd.findElement(By.cssSelector("div[class$='login_login__3EHKB'] button:nth-child(4)")).click();
+
+
+    }
     @AfterMethod
     public void postCondition(){
         //wd.quit();
